@@ -11,11 +11,41 @@
     <title>Meal DB</title>
 </head>
 
-<body>
+<body class="bg-clor">
+    <h2 class="text-center mt-4 text-success fw-bold">Search Your Fevrate Food</h2>
+    <div class="input-group mb-3 mx-auto w-50 mt-3">
+        <!-- Meal search Aria -->
+        <input id="search-field" type="text" class="form-control" placeholder="Search Your Fevrate Meal"
+            aria-label="Search Your Fevrate Meal" aria-describedby="button-addon2">
+        <button onclick="searchFood()" class="btn btn-outline-secondary" type="button"
+            id="button-search">Search</button>
+    </div>
+    <!-- Single meal detail -->
+    <div id="meal-detail">
+        <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+    </div>
 
-
-
-
+    <!-- Meal Search Result -->
+    <div id="search-results" class="row row-cols-1 row-cols-md-3 g-4 mt-3">
+        <!-- <div class="col">
+            <div class="card h-100">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                        additional content. This content is a little bit longer.</p>
+                </div>
+            </div>
+        </div> -->
+    </div>
 
 
     <script src="js/bootstrap.bundle.min.js"></script>
