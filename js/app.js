@@ -2,6 +2,7 @@ const searchFood = () => {
     const searchField = document.getElementById('search-field')
     const searchText = searchField.value
     console.log(searchText)
+    // Clear Data from search field
     searchField.value = ''
     const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchText}`
     fetch(url)
@@ -11,6 +12,12 @@ const searchFood = () => {
 }
 const displayMealResult = (meals) => {
     const searchResult = document.getElementById('search-results')
+    //Clear privious contain
+    // system 1.0
+    //searchResult.innerHTML = ''
+    // system 2.0
+    searchResult.textContent = ''
+
     meals.forEach(meal => {
         console.log(meal)
         const div = document.createElement('div')
@@ -37,6 +44,8 @@ const loadMealDetail = mealId => {
 const displayMealDetail = meal => {
     console.log(meal)
     const mealDetail = document.getElementById('meal-detail')
+    // clear meal detail
+    mealDetail.textContent = ''
     const div = document.createElement('div')
     div.classList.add('card')
     div.innerHTML = `
